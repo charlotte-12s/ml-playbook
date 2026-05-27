@@ -10,5 +10,5 @@
     "validate": "node -e \"const fs=require('fs');const skills=['ml-bootstrap','ml-debug','ml-ship','llm-craft'];let ok=true;skills.forEach(s=>{const p='skills/'+s+'/SKILL.md';if(!fs.existsSync(p)){console.error('MISSING: '+p);ok=false;}else{const c=fs.readFileSync(p,'utf8');if(!c.includes('name:')||!c.includes('description:')){console.error('INVALID FRONTMATTER: '+p);ok=false;}}});if(ok)console.log('All skills valid');else process.exit(1);\""
   },
   "keywords": ["claude-code", "skills", "ml", "machine-learning", "mlops", "llm", "rag", "agent"],
-  "license": "MIT"
+  "license": "BSD-3-Clause"
 }

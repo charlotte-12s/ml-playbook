@@ -37,7 +37,7 @@ Stop vibe-ML-ing. Start using The ML Playbook.
 npx ml-playbook
 
 # Or with curl
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/ml-playbook/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/charlotte-12s/ml-playbook/main/install.sh | bash
 ```
 
 ## Install Options
@@ -109,4 +109,4 @@ Each skill comes with:
 
 ## License
 
-MIT
+BSD-3-Clause
