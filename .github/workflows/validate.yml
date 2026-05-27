@@ -1,0 +1,66 @@
+name: Validate Skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate SKILL.md structure
+        run: |
+          skills=("ml-bootstrap" "ml-debug" "ml-ship" "llm-craft")
+          for skill in "${skills[@]}"; do
+            file="skills/$skill/SKILL.md"
+            if [ ! -f "$file" ]; then
+              echo "ERROR: Missing $file"
+              exit 1
+            fi
+            if ! grep -q "^name:" "$file"; then
+              echo "ERROR: Missing 'name' in frontmatter of $file"
+              exit 1
+            fi
+            if ! grep -q "^description:" "$file"; then
+              echo "ERROR: Missing 'description' in frontmatter of $file"
+              exit 1
+            fi
+            echo "OK: $file"
+          done
+
+      - name: Validate CLAUDE.md has 12 rules
+        run: |
+          count=$(grep -c "^## Rule" CLAUDE.md)
+          if [ "$count" -ne 12 ]; then
+            echo "ERROR: Expected 12 rules, found $count"
+            exit 1
+          fi
+          echo "OK: CLAUDE.md has $count rules"
+
+      - name: Validate reference files exist
+        run: |
+          declare -A expected_refs
+          expected_refs[ml-bootstrap]="problem-definition-template.md data-audit-checklist.md project-scaffold.md"
+          expected_refs[ml-debug]="diagnosis-decision-tree.md common-pitfalls.md"
+          expected_refs[ml-ship]="deployment-checklist.md monitoring-template.md"
+          expected_refs[llm-craft]="rag-architecture-guide.md prompt-patterns.md eval-framework.md"
+
+          for skill in "${!expected_refs[@]}"; do
+            for ref in ${expected_refs[$skill]}; do
+              file="skills/$skill/references/$ref"
+              if [ ! -f "$file" ]; then
+                echo "ERROR: Missing $file"
+                exit 1
+              fi
+              echo "OK: $file"
+            done
+          done
+
+      - name: Validate install script
+        run: |
+          chmod +x install.sh
+          bash install.sh --help
