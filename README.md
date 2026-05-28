@@ -4,6 +4,7 @@
 
 **12 rules and 4 skills that make Claude your senior ML engineer**
 
+[![npm version](https://img.shields.io/npm/v/ml-playbook.svg)](https://www.npmjs.com/package/ml-playbook)
 [![License: BSD-3-Clause](https://img.shields.io/badge/License-BSD--3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![GitHub Stars](https://img.shields.io/github/stars/charlotte-12s/ml-playbook?style=social)](https://github.com/charlotte-12s/ml-playbook/stargazers)
 [![CI](https://github.com/charlotte-12s/ml-playbook/actions/workflows/validate.yml/badge.svg)](https://github.com/charlotte-12s/ml-playbook/actions/workflows/validate.yml)
@@ -225,6 +226,13 @@ Please read the existing skill structure before submitting PRs.
 ## ⭐ Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=charlotte-12s/ml-playbook&type=Date)](https://star-history.com/#charlotte-12s/ml-playbook&type=Date)
+
+---
+
+## More Tools for AI Developers
+
+- 🎓 [PaperCraft](https://github.com/charlotte-12s/paper-craft) — 17 rules + 12 skills for CS research (idea → accepted paper)
+- 🔄 [ContextSync](https://github.com/charlotte-12s/context-sync) — 8 rules + 3 skills that make AI respect your project conventions
 
 ---
 
