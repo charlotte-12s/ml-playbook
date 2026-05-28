@@ -2,13 +2,29 @@
   "name": "ml-playbook",
   "version": "1.0.0",
   "description": "The ML Playbook — 12 rules and 4 skills that make Claude your senior ML engineer",
+  "author": "charlotte-12s",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlotte-12s/ml-playbook.git"
+  },
+  "homepage": "https://github.com/charlotte-12s/ml-playbook#readme",
+  "bugs": {
+    "url": "https://github.com/charlotte-12s/ml-playbook/issues"
+  },
   "bin": {
-    "ml-playbook": "./install.sh"
+    "ml-playbook": "./cli.js"
   },
+  "files": [
+    "cli.js",
+    "install.sh",
+    "CLAUDE.md",
+    "skills/",
+    "validate.js"
+  ],
   "scripts": {
-    "install-skills": "bash install.sh",
-    "validate": "node -e \"const fs=require('fs');const skills=['ml-bootstrap','ml-debug','ml-ship','llm-craft'];let ok=true;skills.forEach(s=>{const p='skills/'+s+'/SKILL.md';if(!fs.existsSync(p)){console.error('MISSING: '+p);ok=false;}else{const c=fs.readFileSync(p,'utf8');if(!c.includes('name:')||!c.includes('description:')){console.error('INVALID FRONTMATTER: '+p);ok=false;}}});if(ok)console.log('All skills valid');else process.exit(1);\""
+    "install-skills": "node cli.js",
+    "validate": "node validate.js"
   },
-  "keywords": ["claude-code", "skills", "ml", "machine-learning", "mlops", "llm", "rag", "agent"],
-  "license": "BSD-3-Clause"
+  "keywords": ["claude-code", "skills", "ml", "machine-learning", "mlops", "llm", "rag", "agent"]
 }
