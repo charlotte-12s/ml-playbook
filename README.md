@@ -4,6 +4,8 @@
 
 **12 rules and 4 skills that make Claude your senior ML engineer**
 
+> 🌟 If this playbook saves you time, please consider giving it a star — it helps others find it!
+
 [![npm version](https://img.shields.io/npm/v/ml-playbook.svg)](https://www.npmjs.com/package/ml-playbook)
 [![License: BSD-3-Clause](https://img.shields.io/badge/License-BSD--3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![GitHub Stars](https://img.shields.io/github/stars/charlotte-12s/ml-playbook?style=social)](https://github.com/charlotte-12s/ml-playbook/stargazers)
