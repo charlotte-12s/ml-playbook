@@ -7,7 +7,7 @@
 [![npm version](https://img.shields.io/npm/v/ml-playbook.svg)](https://www.npmjs.com/package/ml-playbook)
 [![License: BSD-3-Clause](https://img.shields.io/badge/License-BSD--3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![GitHub Stars](https://img.shields.io/github/stars/charlotte-12s/ml-playbook?style=social)](https://github.com/charlotte-12s/ml-playbook/stargazers)
-[![CI](https://github.com/charlotte-12s/ml-playbook/actions/workflows/validate.yml/badge.svg)](https://github.com/charlotte-12s/ml-playbook/actions/workflows/validate.yml)
+[![CI](https://github.com/charlotte-12s/ml-playbook/actions/workflows/validate.yml/badge.svg?branch=master)](https://github.com/charlotte-12s/ml-playbook/actions/workflows/validate.yml)
 
 **Stop vibe-ML-ing. Start using The ML Playbook.**
 
